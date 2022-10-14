@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Petit pierre feuille ciseaux</title>
+        <link rel='stylesheet' href='PFC.css'/>
+    </head>
+
+    <body>
+
+        <div class='page'>
+            <img src="../Accueil/pfc.png" class="logo"/>
+            <div class='menu'>
+                <h1>POK de Gabriel</h1>
+            </div>
+            <div class='content'> 
+                <br>
+                <h2>Sur cette page vous pouvez jouer à <em>pierre feuille ciseaux</em> avec un ami. </h2>
+                <br>
+                <p><strong>Règles : </strong>Tour à tour, les joueurs sélectionnent une action parmi les 3. La pierre gagne contre le 
+                ciseau qui gagne contre la feuille qui gagne contre la pierre.</p>
+                <div class="ensemble">
+                    <div class="jouer IA"><p>Jouer contre l'IA.</p>
+                        <div class="button">
+                            <button>Jouer</button>
+                        </div>
+                    </div>
+                    <div class="jouer J2"><p>Jouer contre J2</p>
+                        <div class="button2">
+                            <button>Jouer</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class='footer'>
+                <hr>
+                <p class="droits">2022. Site de Gabriel BARBE. Tous droits réservés.</p>
+            </div>
+        </div>
+        <script>
+            var btn = document.querySelector('button');
+            var btn2 = document.querySelector('button2');
+
+            var J1,J2, Vainqueur;
+            var coupIA; 
+            var panneau, html, panel, btn3;
+            var resetButton;
+            var pierre, feuille, ciseaux;
+
+
+            btn.addEventListener('click', choixCoups2);
+            btn2.addEventListener('click', choixCoups);
+
+            function PFC (J1,J2){
+                if (Vainqueur==='Null') {
+                    html.removeChild(panel);
+                } else {}
+                if (J1==='Pierre' && J2==='Ciseaux') {
+                    Vainqueur = 'J1';
+                } else if (J1==='Pierre' && J2==='Feuille') {
+                    Vainqueur = 'J2';
+                } else if (J1==='Ciseaux' && J2==='Pierre') {
+                    Vainqueur = 'J2';
+                } else if (J1==='Ciseaux' && J2==='Feuille') {
+                    Vainqueur = 'J1'; 
+                } else if (J1==='Feuille' && J2==='Ciseaux') {
+                    Vainqueur = 'J2';
+                } else if (J1==='Feuille' && J2==='Pierre') {
+                    Vainqueur = 'J1';
+                } else Vainqueur='Null';
+
+                html = document.querySelector('html');
+
+                panel = document.createElement('div');
+                panel.setAttribute('class', 'msgBox');
+                html.appendChild(panel);
+
+                if (Vainqueur==='Null') {
+                    var msg = document.createElement('p');
+                    msg.textContent = 'J2 a joué ' + J2 + '. Match nul. Réessayez'
+                    panel.appendChild(msg);
+                    choixCoups2();
+                } else {
+                    var msg = document.createElement('p');
+                    msg.textContent = 'J2 a joué ' + J2 + '. Le vainqueur est : ' + Vainqueur;
+                    panel.appendChild(msg);
+                    setGameOver();
+                }
+            }
+
+            function choixCoups (){
+                var bool=false;
+                while (bool===false) {
+                    J1=prompt('J1 choisit son coup : Pierre, Feuille ou Ciseaux');
+                    if (J1 === 'Pierre' || J1 === 'Feuille' || J1 === 'Ciseaux') {
+                        bool=true;
+                    } else {
+                        bool=false;
+                        alert('Entrez un coup valide ');}
+                }
+                bool=false;
+                while (bool===false) {
+                    J2=prompt('J2 choisit son coup');
+                        if (J2 === 'Pierre' || J2 === 'Feuille' || J2 === 'Ciseaux') {
+                            bool=true;
+                        } else {
+                            bool=false;
+                            alert('Entrez un coup valide ');
+                        }
+                }
+                PFC(J1,J2);
+            }
+
+            function choixCoups2 () {
+                html = document.querySelector('html');
+
+                panneau = document.createElement('div');
+                panneau.setAttribute('class', 'liste');
+                html.appendChild(panneau);
+
+                var choix = document.createElement('ul');
+                panneau.appendChild(choix);
+
+                var l1 = document.createElement('li');
+                choix.appendChild(l1);
+
+                var l2 = document.createElement('li');
+                choix.appendChild(l2);
+
+                var l3 = document.createElement('li');
+                choix.appendChild(l3);
+
+                pierre = document.createElement('button');
+                pierre.textContent='Pierre';
+                l1.appendChild(pierre);
+                pierre.addEventListener('click', Pierre);
+
+                ciseaux = document.createElement('button');
+                ciseaux.textContent='Ciseaux';
+                l2.appendChild(ciseaux);
+                ciseaux.addEventListener('click', Ciseaux);
+
+                feuille = document.createElement('button');
+                feuille.textContent='Feuille';
+                l3.appendChild(feuille);
+                feuille.addEventListener('click', Feuille);
+
+                document.querySelector('.ensemble').style.display = 'none';
+                coupOrdi();
+            }
+
+            function coupOrdi(){
+                a = 1 + Math.floor(Math.random()*((4-1)));
+                if (a===1){
+                    J2='Pierre';
+                }
+                else if (a===2) {
+                    J2='Feuille';
+                }
+                else { 
+                    J2='Ciseaux';
+                }
+            }
+            
+            function Pierre(){
+                J1 = 'Pierre'; 
+                html.removeChild(panneau);
+                PFC(J1,J2);
+            }
+            function Feuille(){
+                J1 = 'Feuille'; 
+                html.removeChild(panneau);
+                PFC(J1,J2);
+            }
+            function Ciseaux(){
+                J1 = 'Ciseaux'; 
+                html.removeChild(panneau);
+                PFC(J1,J2);
+            }
+
+            function setGameOver() {
+                html=document.querySelector('html');
+
+                resetButton = document.createElement('button');
+                resetButton.textContent = 'Start new game';
+                resetButton.setAttribute('class', 'button');
+                panel.appendChild(resetButton);
+                resetButton.addEventListener('click', resetGame);
+            }
+
+            function resetGame(){
+                html.removeChild(panel);
+                resetButton.parentNode.removeChild(resetButton);
+                //html.removeChild(panel);
+                document.querySelector('.ensemble').style.display = 'block';
+                
+            }
+
+            /* to do :
+            Implémenter fonction J2 sur bouton 2
+            Essayer de mettre sous forme de boucle ma fonction choixCoups2
+            Changer fonction choixCoups
+            Essayer de changer mes boutons en image cliquable*/
+        </script>
+    </body>
+</html>
