@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8"/>
+      <title>Roulette</title>
+
+      <link href="main.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <header>
+      <a href='../Accueil.html'><img src="../Images/roulette3.png" id="logo"/></a>
+      <div id="titre">
+        <h1>POK de Timothée</h1>
+      </div>  
+    </header>
+
+    <div id="page">
+      <h1 id="intro">Vous pouvez entrer jusqu'à 4 choix, la roulette se chargera du reste !</h1>
+      <div id="div_choix1" class="div_choix">
+        <input type="text" id="text_choix1" name="text_choix1" placeholder="Premier choix" class="choix" maxlength="10">
+      </div>
+      <div id="div_choix2" class="div_choix">
+          <input type="text" id="text_choix2" name="text_choix2" placeholder="Deuxième choix" class="choix" maxlength="10">
+          <button type="submit" id="bouton_add2" class="bouton">+</button>
+      </div>
+      <div id="div_choix3" class="div_choix">
+        <input type="text" id="text_choix3" name="text_choix3" placeholder="Troisième choix" class="choix" maxlength="10">
+        <button type="submit" id="bouton_add3" class="bouton">+</button>
+        <button type="submit" id="bouton_supp3" class="bouton">-</button>
+      </div>
+      <div id="div_choix4" class="div_choix">
+        <input type="text" id="text_choix4" name="text_choix4" placeholder="Quatrième choix" class="choix" maxlength="10">
+        <button type="submit" id="bouton_supp4" class="bouton">-</button>
+      </div>
+      <button type="submit" id="bouton_suivant" class="bouton">Lancer la roue</button>
+    </div>
+    
+    <script src="roulette.js"></script>
+  </body>
+</html>

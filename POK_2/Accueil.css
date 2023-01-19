@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.menu {
+    height: 100px;
+    background-color: #33d373;
+    border-bottom : 2px solid #5D6063;
+    text-align: center;
+}
+.sidebar {
+    height: 300px;
+    width: 100px;
+}
+.content {
+    width : 1200px;
+    margin: 0 auto;
+    height: 618px;
+    background-color:#EAEDF0;
+}
+.page {
+    overflow: hidden;             
+    background-color: #EAEDF0;
+}
+.footer {
+    height: 22px;
+    background-color: #EAEDF0;
+}
+.Salut {
+    margin-top: 12px;
+    text-align: center;
+    size: 1.2em;
+}
+.h1 {
+    padding: 50px;
+}
+.droits {
+    font-size: xx-small;
+    font-weight: lighter;
+    padding: 0px;
+    font-style: italic;
+  }
+.PFC {
+    float: left;
+    margin-top: 15%;
+}
+.roue{
+    float:right;
+    margin-top: 12%;
+}

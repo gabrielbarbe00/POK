@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.menu {
+  height: 100px;
+  background-color: #33d373;
+  border-bottom : 2px solid #5D6063;
+  text-align: center;
+}
+.sidebar {
+  height: 300px;
+  width: 100px;
+}
+.content {
+  width : 1200px;
+  margin: 0 auto;
+  height: 618px;
+  background-color:#EAEDF0;
+}
+.page {
+  overflow: hidden;             
+  background-color: #EAEDF0;
+}
+.footer {
+  height: 22px;
+  background-color: #EAEDF0;
+}
+.Salut {
+  margin-top: 12px;
+  text-align: center;
+  size: 1.2em;
+}
+.h1 {
+  padding: 50px;
+}
+.droits {
+  font-size: xx-small;
+  font-weight: lighter;
+  padding: 0px;
+  font-style: italic;
+}
+.PFC {
+  float: left;
+  margin-top: 15%;
+}
+.roue{
+  float:right;
+  margin-top: 12%;
+}
+
+.sidebar {
+  height: 300px;
+}
+
+.content {
+  width : 900px;
+  margin: 0 auto;
+  height: 630px;
+  background-color:#EAEDF0;
+}
+
+.page {
+  overflow: hidden;             
+  background-color: #EAEDF0;
+}
+
+.footer {
+  height: 22px;
+  background-color: #EAEDF0;
+}
+
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+  color: rgb(12, 12, 12);
+  padding: 20px;
+  margin-right: 200px;
+}
+
+p {
+  font-size: larger;
+}
+.resetbutton{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.ensemble {
+text-align: center;
+margin-top: 200px;
+}
+.jouer{
+width: 200px;
+}
+
+.button1 {
+  width: 200px;
+  color: #FFF;
+  background-color: #33d373;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color : black;
+}
+.button2 {
+width: 200px;
+color: #FFF;
+background-color: #33d373;
+font-weight: bold;
+padding: 20px;
+text-align: center;
+border: 2px solid #5D6063;
+border-radius: 5px;
+box-sizing: border-box;
+color : black;
+}
+
+.droits {
+  font-size: xx-small;
+  font-weight: lighter;
+  padding: 0px;
+  font-style: italic;
+}
+
+.logo {
+  float: left;
+  width: 200px;
+  height: 100px;
+border-bottom: 2px solid #5D6063 ;
+}
+.msgBox {
+position: absolute;
+top: 70%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 500px;
+background: #33d373;
+border-radius: 5px;
+border: solid #5D6063 2px;
+
+}
+
+.msgBox p {
+line-height: 1.5;
+padding: 10px 20px;
+text-align: center;
+color: #333;
+background-position: 25px center;
+background-repeat: no-repeat;
+}
+
+.msgBox button {
+background: none;
+border: none;
+position: absolute;
+top: 0;
+right: 0;
+font-size: 1.1rem;
+color: #aaa;
+}
+
+.liste {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 500px;
+background: #EAEDF0;
+}
+
+.IA {
+margin-left: 50px;
+float: left; 
+}
+
+.J2{
+margin-right: 50px;
+float: right;
+}
+
+.coup {
+  margin-left: 50px;
+  padding: 20px;
+}
+
+.historique {
+  margin:auto; 
+  margin-top: 50px;
+}

@@ -1,0 +1,30 @@
+doctype html
+html(lang='fr')
+  head
+    meta(charset='UTF-8')
+    title Petit pierre feuille ciseaux
+    link(rel='stylesheet', href='/stylesheets/style2.css')
+  body
+    <div class='page'>
+      a(href='../Accueil.html')
+        img.logo(src='../Images/pfc.png')
+      .menu
+        h1 POK de Gabriel
+      .content
+        br
+        h2
+          | Historique des coups
+        br
+        p  
+        ul
+        each coup in coup_list
+            .coup
+                p #{coup.name}
+                | #{coup.date}
+                hr
+        else
+            li There are no books.
+      .footer
+        hr
+        p.droits 2022. Site de Gabriel BARBE. Tous droits réservés.
+        </div>
