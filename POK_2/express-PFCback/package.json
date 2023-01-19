@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "start -p 10408"
+    "start": "next start -p 10408"
   },
   "dependencies": {
     "async": "^3.2.4",
