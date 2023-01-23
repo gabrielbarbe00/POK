@@ -135,6 +135,7 @@ html(lang='fr')
       choix.appendChild(l3);
       pierre = document.createElement('img');
       pierre.src ='https://comps.canstockphoto.fr/poing-illustration-isol%C3%A9-main-vecteur-eps_csp51597089.jpg';
+      pierre.style.width = "300px";
       l1.appendChild(pierre);
       pierre.addEventListener('click', Pierre);
       /*pierre.addEventListener('click', function(){
@@ -145,10 +146,12 @@ html(lang='fr')
       });*/
       ciseaux = document.createElement('img');
       ciseaux.src='https://image.shutterstock.com/image-vector/scissors-icon-trendy-flat-style-600w-675052192.jpg'
+      ciseaux.style.width = "300px";
       l2.appendChild(ciseaux);
       ciseaux.addEventListener('click', Ciseaux);
       feuille = document.createElement('img');
       feuille.src='https://th.bing.com/th/id/R.cc5762e727bce96715d42b2294511392?rik=ArkBJFhYPgQysg&pid=ImgRaw&r=0';
+      feuille.style.width = "300px";
       l3.appendChild(feuille);
       feuille.addEventListener('click', Feuille);
       document.querySelector('.ensemble').style.display = 'none';
