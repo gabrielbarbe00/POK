@@ -38,6 +38,9 @@ html(lang='fr')
         p.droits 2022. Site de Gabriel BARBE. Tous droits réservés.
         </div>
     script.
+      
+      //var mongoose = require("mongoose");
+      //var Coup = require('./models/coups');
       var btn = document.querySelector('button1');
       var btn2 = document.querySelector('button2');
       var J1,J2, Vainqueur;
@@ -134,6 +137,12 @@ html(lang='fr')
       pierre.src ='../Images/Pierre.png';
       l1.appendChild(pierre);
       pierre.addEventListener('click', Pierre);
+      /*pierre.addEventListener('click', function(){
+      mongoose.model("Coup", CoupSchema).findOneAndUpdate({name:'Pierre'}, {date:Date.now}, function(err, utilisateur)
+        {
+          if (err) return handleError(err);
+        })
+      });*/
       ciseaux = document.createElement('img');
       ciseaux.src='../Images/Ciseaux.png'
       l2.appendChild(ciseaux);
