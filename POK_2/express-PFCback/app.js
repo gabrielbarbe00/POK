@@ -8,10 +8,15 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+var port = 10408 ; //et ça
 
 const wiki = require("./wiki.js");
 // …
 app.use("/wiki", wiki);
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+}) // j'ai rajouté ça
 
 
 var mongoose = require('mongoose');
